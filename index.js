@@ -14,6 +14,11 @@ form.addEventListener('submit', e => {
       score += 25
     }
   })
-
-  console.log(score)
+  let scoreShown = 0
+  setInterval(() => {
+    if(scoreShown < score) {
+      scoreShown++
+      console.log(scoreShown)
+    }
+  }, 50);
 })
