@@ -2,6 +2,7 @@ const correctAnswers = ["B", "A", "B", "B"]
 
 const form = document.querySelector('form')
 const scoreDOM = document.querySelector('.score')
+const scoreDOMContainer = document.querySelector('.score--container')
 
 form.addEventListener('submit', e => {
   e.preventDefault()
@@ -32,5 +33,6 @@ form.addEventListener('submit', e => {
         clearInterval(animateScore) //This way I can kill the process to keep performance on the website. I don't want this interval to be infinite
       }
     }, 20)
+  scoreDOMContainer.style.display = 'flex'
   }, 1000);
 })
