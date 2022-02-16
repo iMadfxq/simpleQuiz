@@ -1,8 +1,17 @@
 const correctAnswers = ["B", "A", "B", "B"]
 
 const form = document.querySelector('form')
+const lastScoreDOM = document.querySelector('.lastScore')
+const lastScoreDOMContainer = document.querySelector('.lastScore--container')
 const scoreDOM = document.querySelector('.score')
 const scoreDOMContainer = document.querySelector('.score--container')
+
+let lastScoreJS = localStorage.getItem('last_score')
+
+if(lastScoreJS) { //If there is something in memory it is going to show it.
+  lastScoreDOM.textContent = `${lastScoreJS}%`
+  lastScoreDOMContainer.style.display = 'flex'
+}
 
 form.addEventListener('submit', e => {
   e.preventDefault()
@@ -17,6 +26,10 @@ form.addEventListener('submit', e => {
     }
   })
 
+  localStorage.setItem('last_score', scoreJS) //This way if the user does the test we will keep his last score
+  lastScoreJS = localStorage.getItem('last_score')
+  lastScoreDOM.textContent = `${lastScoreJS}%` //I also added this line right here because I want the DOM to be updated everytime we have a new last score which is everytime we do a submit
+  lastScoreDOMContainer.style.display = 'flex'
   
   let scoreAnimated = 0 //everytime we do a submit, this value has to start from zero
   if(scoreAnimated === scoreJS) {
