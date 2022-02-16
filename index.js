@@ -17,22 +17,22 @@ form.addEventListener('submit', e => {
     }
   })
 
-  scoreDOM.scrollIntoView()
-
+  
   let scoreAnimated = 0 //everytime we do a submit, this value has to start from zero
-  let animateScore
-  setTimeout(() => { // I'm putting it all inside a setTimeOut because I want to give some time for the scroll animation on line 19 to be executed.
+  if(scoreAnimated === scoreJS) {
+    scoreDOM.textContent = `${scoreAnimated}% 😞`
+  }
 
-    // I'm assigning setInterval as the value of the animateScore variable so the setInterval method get an id that I will use later to kill the process
-    animateScore = setInterval(() => {
-      //Using setInterval might not be very performance friendly, but I'm trying to get some practice with this method.
-      if(scoreAnimated < scoreJS) {
-        scoreAnimated++
-        scoreDOM.textContent = scoreAnimated
-      } else {
-        clearInterval(animateScore) //This way I can kill the process to keep performance on the website. I don't want this interval to be infinite
-      }
-    }, 20)
+  // I'm assigning setInterval as the value of the animateScore variable so the setInterval method get an id that I will use later to kill the process
+  animateScore = setInterval(() => {
+    //Using setInterval might not be very performance friendly, but I'm trying to get some practice with this method.
+    if(scoreAnimated < scoreJS) {
+      scoreAnimated++
+      scoreDOM.textContent = `${scoreAnimated}%`
+    } else {
+      clearInterval(animateScore) //This way I can kill the process to keep performance on the website. I don't want this interval to be infinite
+    }
+  }, 30)
   scoreDOMContainer.style.display = 'flex'
-  }, 1000);
+  scoreDOM.scrollIntoView()
 })

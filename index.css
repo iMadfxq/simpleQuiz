@@ -13,7 +13,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
 }
 
 header {
@@ -23,13 +22,19 @@ header {
   align-items: center;
   width: 100%;
   padding: 0px 20px;
-  height: 120px;
+  background-color: aqua;
+  text-align: center;
 }
 header h1 {
   font-size: 3rem;
+  background-color: beige;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
 }
 header p {
   font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 form {
@@ -37,7 +42,7 @@ form {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 0px 20px;
+  padding: 20px;
 }
 form h3 {
   font-size: 2.4rem;
@@ -46,10 +51,38 @@ form label {
   font-size: 2rem;
   margin: 5px;
 }
+.form--submit {
+  width: 140px;
+  height: 50px;
+  font-size: 1.8rem;
+  align-self: center;
+  margin: 10px;
+  border: 1px solid aqua;
+  border-radius: 10px;
+  background-color: beige;
+}
 .option {
   margin: 10px;
 }
 .option input {
   width: 15px;
   height: 15px;
+}
+
+.score--container {
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 4rem;
+}
+.score--container p {
+  background-color: aqua;
+  border-radius: 10px;
+  height: 100px;
+}
+.score--container span {
+  font-weight: 900;
 }
