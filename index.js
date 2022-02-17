@@ -45,7 +45,7 @@ form.addEventListener('submit', e => {
     } else {
       clearInterval(animateScore) //This way I can kill the process to keep performance on the website. I don't want this interval to be infinite
     }
-  }, 30)
+  }, 20)
   scoreDOMContainer.style.display = 'flex'
   scoreDOM.scrollIntoView()
 })

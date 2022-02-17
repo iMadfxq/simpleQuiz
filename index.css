@@ -1,3 +1,8 @@
+:root {
+  --mainColor: beige;
+  --secondaryColor: aqua;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,12 +27,12 @@ header {
   align-items: center;
   width: 100%;
   padding: 0px 20px;
-  background-color: aqua;
+  background-color: var(--secondaryColor);
   text-align: center;
 }
 header h1 {
   font-size: 3rem;
-  background-color: beige;
+  background-color: var(--mainColor);
   padding: 10px;
   border-radius: 10px;
   margin: 10px;
@@ -57,9 +62,9 @@ form label {
   font-size: 1.8rem;
   align-self: center;
   margin: 10px;
-  border: 1px solid aqua;
+  border: 1px solid var(--secondaryColor);
   border-radius: 10px;
-  background-color: beige;
+  background-color: var(--mainColor);
 }
 .option {
   margin: 10px;
@@ -79,7 +84,7 @@ form label {
   font-size: 4rem;
 }
 .score--container p {
-  background-color: aqua;
+  background-color: var(--secondaryColor);
   border-radius: 10px;
   height: 100px;
 }
@@ -87,7 +92,7 @@ form label {
   font-weight: 900;
 }
 .lastScore--container {
-  background-color: beige;
+  background-color: var(--mainColor);
   border-radius: 10px;
   padding: 5px;
 }
