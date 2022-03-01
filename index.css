@@ -12,7 +12,11 @@
 html {
   font-size: 62.5%;
 }
- 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -33,6 +37,13 @@ header h1 {
 header p {
   font-size: 2rem;
   margin-bottom: 10px;
+}
+
+.explaination {
+  color: rgb(121, 121, 121);
+  font-size: 1.6rem;
+  margin: 30px 20px 10px 20px;
+  text-align: center;
 }
 
 form {
